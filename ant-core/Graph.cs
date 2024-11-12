@@ -12,7 +12,11 @@ public class Graph
 
     public double[] this[int i] => matrix[i];
 
-    public double this[int i, int j] => matrix[i][j];
+    public double this[int i, int j]
+    {
+        get => matrix[i][j];
+        set => matrix[i][j] = value;
+    }
 
     public Graph(double[][] matrix)
     {

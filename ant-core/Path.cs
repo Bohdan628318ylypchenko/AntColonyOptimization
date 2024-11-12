@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Aco;
@@ -15,6 +16,11 @@ public class Path
     {
         trajectory = new List<int>();
         totalCost = 0;
+    }
+
+    public Path(double initialCost)
+    {
+        totalCost = initialCost;
     }
 
     public override bool Equals(object obj)

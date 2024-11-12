@@ -9,7 +9,7 @@ internal class AntTests
         "normalized-quantum-big.rnd";
 
     [Test]
-    public void FindPath()
+    public void FindPathSingleAnt()
     {
         FileRandomNumbersGenerator.InitializeRandomNumbersSource(
             RANDOM_NUMBERS_SOURCE_FILENAME
@@ -33,5 +33,27 @@ internal class AntTests
             Is.EquivalentTo(new List<int> { 0, 2, 6, 7 })
         );
         Assert.That(p.TotalCost, Is.EqualTo(3.0));
+    }
+
+    [Test]
+    public void FindPathAntColony()
+    {
+        FileRandomNumbersGenerator.InitializeRandomNumbersSource(
+            RANDOM_NUMBERS_SOURCE_FILENAME
+        );
+
+        Graph g = GraphReader.ReadFromPath("test-valid.aco");
+
+        AntColony ac = new AntColony(
+            g,
+            0.1, 1, 1,
+            0, 7,
+            10,
+            100,
+            1, 0.9
+        );
+
+        Path p = ac.FindPath();
+        Assert.That(p.TotalCost, Is.EqualTo(3));
     }
 }
