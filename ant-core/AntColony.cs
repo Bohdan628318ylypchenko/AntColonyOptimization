@@ -81,7 +81,7 @@ public class AntColony
             Path min = paths.MinBy(p => p.TotalCost);
             if (min.TotalCost < globalMin.TotalCost)
             {
-                globalMin = min;
+                globalMin = new Path(min);
             }
 
             iterationCount++;

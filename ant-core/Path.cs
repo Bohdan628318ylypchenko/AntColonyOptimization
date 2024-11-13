@@ -24,6 +24,12 @@ public class Path
         totalCost = initialCost;
     }
 
+    public Path(Path other)
+    {
+        trajectory = new List<int>(other.Trajectory);
+        totalCost = other.totalCost;
+    }
+
     public override bool Equals(object obj)
     {
         if (obj == null) return false;
