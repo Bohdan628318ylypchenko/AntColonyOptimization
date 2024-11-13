@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ant-core", "ant-core\ant-core.csproj", "{BA041662-59EC-4927-B311-C558D2370040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ant-core", "ant-core\ant-core.csproj", "{BA041662-59EC-4927-B311-C558D2370040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ant-tests", "ant-tests\ant-tests.csproj", "{8AA923E4-F2AD-4962-8610-544EA9FC5039}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ant-tests", "ant-tests\ant-tests.csproj", "{8AA923E4-F2AD-4962-8610-544EA9FC5039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ant-demo", "ant-demo\ant-demo.csproj", "{9D34F693-0CD4-4F2C-8DD9-B7C8D1A792C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8AA923E4-F2AD-4962-8610-544EA9FC5039}.Debug|x64.Build.0 = Debug|x64
 		{8AA923E4-F2AD-4962-8610-544EA9FC5039}.Release|x64.ActiveCfg = Release|x64
 		{8AA923E4-F2AD-4962-8610-544EA9FC5039}.Release|x64.Build.0 = Release|x64
+		{9D34F693-0CD4-4F2C-8DD9-B7C8D1A792C3}.Debug|x64.ActiveCfg = Debug|x64
+		{9D34F693-0CD4-4F2C-8DD9-B7C8D1A792C3}.Debug|x64.Build.0 = Debug|x64
+		{9D34F693-0CD4-4F2C-8DD9-B7C8D1A792C3}.Release|x64.ActiveCfg = Release|x64
+		{9D34F693-0CD4-4F2C-8DD9-B7C8D1A792C3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
