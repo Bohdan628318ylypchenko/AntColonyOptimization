@@ -50,8 +50,9 @@ public class AntColony
 
     public Path FindPath()
     {
-        ulong iterationCount = 0;
-        do
+        for (ulong iterationCount = 0;
+             iterationCount < maxIterationCount;
+             iterationCount++)
         {
             Path[] paths = ants
                 .AsParallel()
@@ -83,10 +84,7 @@ public class AntColony
             {
                 globalMin = new Path(min);
             }
-
-            iterationCount++;
         }
-        while(iterationCount < maxIterationCount);
 
         return globalMin;
     }

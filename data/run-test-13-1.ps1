@@ -1,1 +1,12 @@
-..\ant-demo\bin\x64\Release\net8.0-windows\ant-demo.exe -r "./normalized-quantum-big.rnd" -p "./test-13-1.aco" -f 0.1 -a 1 -b 1 -s 0 -e 12 -t 10 -i 100 -q 1 -c 0.9
+..\ant-demo\bin\x64\Release\net8.0-windows\ant-demo.exe `
+    --random-numbers-source-path "./normalized-quantum-big.rnd" `
+    --graph-path "./test-13-1.aco" `
+    --initial-ferment 0.1 `
+    --cost-coefficient 1 `
+    --ferment-coefficient 1 `
+    --vertex-index-start 0 `
+    --vertex-index-end 12 `
+    --ant-count 10 `
+    --max-iteration-count 10 `
+    --ant-ferment-count 1 `
+    --ferment-expiration 0.9
