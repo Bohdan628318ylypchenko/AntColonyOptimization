@@ -65,11 +65,12 @@ public class Ant
         availableVertexes.Remove(viCurrent);
     }
 
-    public void reset()
+    public Ant Reset()
     {
         path.Clear();
         availableVertexes.Clear();
         InitializeAntState();
+        return this;
     }
 
     public Path FindPath()
@@ -91,7 +92,6 @@ public class Ant
                 psum += p;
             }
 
-            //vip = vip.Select((k, v) => (k, v / psum)).ToDictionary();
             foreach (var vi in vip.Keys)
             {
                 vip[vi] /= psum;

@@ -60,7 +60,8 @@ namespace Aco
                         {
                             double[] currentVertex = matrix[redVertexCount++];
                             Array.Copy(
-                                line.Split(' ')
+                                line.Trim()
+                                    .Split(' ')
                                     .Skip(1)
                                     .Select(x => double.Parse(x))
                                     .ToArray(),

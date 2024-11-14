@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Aco;
 
@@ -15,6 +17,17 @@ public class Path
     {
         trajectory = new List<int>();
         totalCost = 0;
+    }
+
+    public Path(double initialCost)
+    {
+        totalCost = initialCost;
+    }
+
+    public Path(Path other)
+    {
+        trajectory = new List<int>(other.Trajectory);
+        totalCost = other.totalCost;
     }
 
     public override bool Equals(object obj)
@@ -34,6 +47,15 @@ public class Path
     public override int GetHashCode()
     {
         return totalCost.GetHashCode() + trajectory.GetHashCode();
+    }
+
+    public override string ToString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine(base.ToString());
+        sb.AppendLine($"TotalCost = {totalCost}");
+        sb.AppendLine($"Trajectory = [{string.Join(",", trajectory.Select(x => x.ToString()))}]");
+        return sb.ToString();
     }
 
     public void Append(int vi)

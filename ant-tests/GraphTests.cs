@@ -21,7 +21,7 @@ namespace AcoTest
         [Test]
         public void ReadFromFileValid() 
         {
-            Graph g = GraphReader.ReadFromPath("test-valid.aco");
+            Graph g = GraphReader.ReadFromPath("test-8-valid.aco");
             Assert.That(g.VertexCount, Is.EqualTo(VERTEX_COUNT));
             for (var i = 5600; i < VERTEX_COUNT; i++)
             {
